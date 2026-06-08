@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessibility Statement – Habitat Fitness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --charcoal: #2F3138;
+      --espresso: #2A2423;
+      --moss: #49563A;
+      --sand: #CBB89F;
+      --steel: #98A6AB;
+      --sand-light: #E8DDD1;
+      --sand-pale: #F4EFE9;
+      --moss-light: #6A7A55;
+      --white: #FAFAF8;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Barlow', sans-serif;
+      --font-label: 'Barlow Condensed', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--espresso);
+      color: var(--sand-light);
+      font-family: var(--font-body);
+      font-weight: 300;
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 48px;
+      background: var(--espresso);
+      border-bottom: 1px solid rgba(152,166,171,0.1);
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--sand-light);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .nav-links { display: flex; list-style: none; gap: 36px; }
+    .nav-links a {
+      font-family: var(--font-label);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--steel);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--sand-light); }
+    .page-hero {
+      padding: 160px 48px 80px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .eyebrow {
+      font-family: var(--font-label);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--moss-light);
+      margin-bottom: 16px;
+    }
+    .page-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 6vw, 64px);
+      font-weight: 400;
+      color: var(--sand-light);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .page-hero .meta { font-size: 14px; color: var(--steel); }
+    .content {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 48px 120px;
+    }
+    .content section { margin-bottom: 56px; }
+    .content h2 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--sand-light);
+      margin-bottom: 16px;
+    }
+    .content p, .content li {
+      font-size: 15px;
+      color: var(--steel);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    .content ul { margin: 12px 0 16px 20px; }
+    .content a { color: var(--sand); text-decoration: underline; }
+    .content a:hover { color: var(--sand-light); }
+    footer {
+      background: var(--espresso);
+      padding: 72px 48px 40px;
+      border-top: 1px solid rgba(152,166,171,0.1);
+    }
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto 56px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 60px;
+    }
+    .footer-brand p { font-size: 14px; color: var(--steel); line-height: 1.8; margin-top: 16px; max-width: 260px; }
+    .footer-col h4 {
+      font-family: var(--font-label);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--sand);
+      margin-bottom: 20px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a { font-size: 14px; color: var(--steel); text-decoration: none; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--sand-light); }
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 32px;
+      border-top: 1px solid rgba(152,166,171,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-bottom p { font-size: 13px; color: var(--steel); }
+    .footer-social { display: flex; gap: 24px; }
+    .footer-social a { font-size: 13px; color: var(--steel); text-decoration: none; transition: color 0.2s; }
+    .footer-social a:hover { color: var(--sand-light); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">Habitat Fitness</a>
+    <ul class="nav-links">
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#experience">Experience</a></li>
+      <li><a href="/#coaching">Coaching</a></li>
+      <li><a href="/#wellness">Wellness</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <p class="eyebrow">Legal</p>
+    <h1>Accessibility Statement</h1>
+    <p class="meta">Last updated: June 7, 2026</p>
+  </div>
+
+  <div class="content">
+
+    <section>
+      <h2>Our Commitment</h2>
+      <p>Habitat Fitness is committed to ensuring digital accessibility for people with disabilities. We continually improve the user experience for everyone and apply relevant accessibility standards to our website.</p>
+    </section>
+
+    <section>
+      <h2>Conformance Status</h2>
+      <p>We aim to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA. These guidelines explain how to make web content more accessible to people with disabilities. Conformance with these guidelines helps make the web more user-friendly for everyone.</p>
+    </section>
+
+    <section>
+      <h2>Accessibility Features</h2>
+      <p>Our website includes the following accessibility features:</p>
+      <ul>
+        <li>Semantic HTML structure to support screen readers and assistive technologies</li>
+        <li>Sufficient color contrast between text and background elements</li>
+        <li>Descriptive alt text for images</li>
+        <li>Keyboard-navigable interface</li>
+        <li>Responsive design that works across different screen sizes and devices</li>
+        <li>Clear and consistent navigation throughout the site</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Physical Accessibility</h2>
+      <p>Our gym at 1828 Oceanside Blvd, Oceanside, CA 92054 is committed to being physically accessible to all members. If you have specific accessibility needs or questions about our facility, please contact us before your visit so we can best accommodate you.</p>
+    </section>
+
+    <section>
+      <h2>Known Limitations</h2>
+      <p>While we strive to ensure accessibility across our website, some content may not yet meet all accessibility standards. We are actively working to identify and address any gaps. If you encounter an accessibility barrier, please let us know and we will make every effort to provide the information in an alternative format.</p>
+    </section>
+
+    <section>
+      <h2>Feedback &amp; Contact</h2>
+      <p>We welcome your feedback on the accessibility of the Habitat Fitness website. If you experience accessibility barriers or have suggestions for improvement, please contact us:</p>
+      <ul>
+        <li>Email: <a href="mailto:Owners@habitatoceanside.com">Owners@habitatoceanside.com</a></li>
+        <li>Phone: <a href="tel:+14422669563">442-266-9563</a></li>
+        <li>Address: 1828 Oceanside Blvd, Oceanside, CA 92054</li>
+      </ul>
+      <p>We aim to respond to accessibility feedback within 5 business days.</p>
+    </section>
+
+    <section>
+      <h2>Formal Complaints</h2>
+      <p>If you are not satisfied with our response to your accessibility concern, you may contact the appropriate authorities in your region regarding accessibility and disability rights.</p>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo">Habitat Fitness</a>
+        <p>A gym in Oceanside, CA</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/#experience">Experience</a></li>
+          <li><a href="/#coaching">Coaching</a></li>
+          <li><a href="/#wellness">Wellness</a></li>
+          <li><a href="/#about">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:Owners@habitatoceanside.com">Owners@habitatoceanside.com</a></li>
+          <li><a href="tel:+14422669563">442-266-9563</a></li>
+          <li><a href="https://maps.google.com/?q=1828+Oceanside+Blvd,+Oceanside,+CA+92054" target="_blank" rel="noopener">1828 Oceanside Blvd, Oceanside CA 92054</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="/terms-of-use.html">Terms of Use</a></li>
+          <li><a href="/accessibility.html">Accessibility Statement</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Habitat Fitness. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/habitatoceanside/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@habitatoceanside" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
