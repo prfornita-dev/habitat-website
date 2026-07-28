@@ -1,0 +1,11 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/memberships", "destination": "/memberships.html" },
+    { "source": "/membership", "destination": "/memberships.html" },
+    { "source": "/coaches", "destination": "/coaches.html" },
+    { "source": "/privacy-policy", "destination": "/privacy-policy.html" },
+    { "source": "/terms-of-use", "destination": "/terms-of-use.html" },
+    { "source": "/accessibility", "destination": "/accessibility.html" }
+  ]
+}
