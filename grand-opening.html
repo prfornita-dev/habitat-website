@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grand Opening · Habitat Fitness</title>
+  <meta name="description" content="Habitat Fitness Grand Opening: Saturday, October 10, 10am to 3pm, in Oceanside, CA. RSVP free and see the Grand Opening membership special.">
+
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Barlow:wght@300;400;500&family=Barlow+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --charcoal: #2F3138;
+      --espresso: #2A2423;
+      --moss: #49563A;
+      --sand: #CBB89F;
+      --steel: #98A6AB;
+      --sand-light: #E8DDD1;
+      --sand-pale: #F4EFE9;
+      --moss-light: #6A7A55;
+      --white: #FAFAF8;
+
+      --page-bg: #F4F0EA;
+      --page-bg-alt: #EDE8E1;
+      --text-primary: #2A2423;
+      --text-secondary: #3D3532;
+      --text-muted: #6B6460;
+      --border-color: rgba(42,36,35,0.12);
+
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Barlow', sans-serif;
+      --font-label: 'Barlow Condensed', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--page-bg);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-weight: 300;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2.5rem;
+      background: rgba(42,36,35,0.97);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(203,184,159,0.15);
+    }
+    .nav-logo {
+      font-family: var(--font-label);
+      font-size: 1rem;
+      letter-spacing: 0.2em;
+      color: var(--sand);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: var(--font-label);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      color: var(--sand-light);
+      text-decoration: none;
+      text-transform: uppercase;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { opacity: 1; color: var(--sand); }
+    @media (max-width: 680px) { .nav-links { display: none; } }
+
+    /* SHARED */
+    .section-label {
+      font-family: var(--font-label);
+      font-size: 0.65rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--moss);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .section-label::before {
+      content: '';
+      display: inline-block;
+      width: 1.5rem;
+      height: 1px;
+      background: var(--moss);
+      opacity: 0.7;
+    }
+
+    /* PAGE HEADER */
+    .page-header {
+      padding: 9rem 2.5rem 3rem;
+      max-width: 960px;
+      margin: 0 auto;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .page-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--text-primary);
+      margin-bottom: 1.5rem;
+    }
+    .page-header h1 em {
+      font-style: italic;
+      color: var(--moss);
+    }
+    .page-header p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      max-width: 560px;
+    }
+
+    /* EVENT FACTS STRIP */
+    .event-facts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-color);
+    }
+    .event-fact-label {
+      font-family: var(--font-label);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--moss);
+      margin-bottom: 0.4rem;
+    }
+    .event-fact-value {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--text-primary);
+    }
+    .event-fact-value a { color: var(--text-primary); text-decoration: none; border-bottom: 1px solid var(--moss); }
+    .event-fact-value a:hover { color: var(--moss); }
+
+    /* EVENT DETAILS / MAP */
+    .details-section {
+      padding: 5rem 2.5rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .details-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    @media (max-width: 700px) { .details-grid { grid-template-columns: 1fr; } }
+    .details-text p {
+      font-size: 0.975rem;
+      line-height: 1.85;
+      color: var(--text-secondary);
+      margin-bottom: 1.25rem;
+    }
+    .details-map {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border: 1px solid var(--border-color);
+      filter: grayscale(15%) contrast(1.02);
+    }
+    .details-map iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+    /* OFFER SECTION */
+    .offer-section {
+      padding: 5rem 2.5rem;
+      background: var(--espresso);
+    }
+    .offer-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .offer-section .section-label { color: var(--sand); justify-content: center; }
+    .offer-section .section-label::before { background: var(--sand); }
+    .offer-inner h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.25rem, 5vw, 3.5rem);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+    .offer-inner h2 em { font-style: italic; color: var(--sand); }
+    .offer-inner > p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--sand-light);
+      max-width: 540px;
+      margin: 0 auto 2.25rem;
+    }
+    .offer-finePrint {
+      font-size: 0.8rem;
+      line-height: 1.7;
+      color: #C8B9A4;
+      font-style: italic;
+      max-width: 560px;
+      margin: 2rem auto 0;
+      border-top: 1px solid rgba(203,184,159,0.15);
+      padding-top: 1.5rem;
+    }
+    .btn-join {
+      display: inline-block;
+      font-family: var(--font-label);
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--espresso);
+      background: var(--sand);
+      padding: 1.1rem 2.5rem;
+      text-decoration: none;
+      transition: background 0.25s;
+    }
+    .btn-join:hover { background: var(--sand-light); }
+    .btn-dark {
+      display: inline-block;
+      font-family: var(--font-label);
+      font-size: 0.8rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--espresso);
+      padding: 1.15rem 2.75rem;
+      text-decoration: none;
+      transition: background 0.25s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-dark:hover { background: var(--charcoal); }
+    .btn-dark:disabled { opacity: 0.6; cursor: default; }
+
+    /* RSVP FORM */
+    .rsvp-section {
+      padding: 5rem 2.5rem 6rem;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .rsvp-card {
+      background: var(--page-bg-alt);
+      border: 1px solid var(--border-color);
+      padding: 3rem;
+    }
+    @media (max-width: 500px) { .rsvp-card { padding: 2rem 1.5rem; } }
+    .rsvp-card h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 300;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+    .rsvp-card > p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+    .form-field { margin-bottom: 1.25rem; }
+    .form-field label {
+      display: block;
+      font-family: var(--font-label);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .form-field input {
+      width: 100%;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      background: var(--white);
+      border: 1px solid var(--border-color);
+      padding: 0.85rem 1rem;
+    }
+    .form-field input:focus {
+      outline: none;
+      border-color: var(--moss);
+    }
+    .interest-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+    @media (max-width: 500px) { .interest-options { grid-template-columns: 1fr; } }
+    .interest-option {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      background: var(--white);
+      padding: 0.75rem 0.9rem;
+      cursor: pointer;
+    }
+    .interest-option input { width: auto; accent-color: var(--moss); }
+    .interest-option:has(input:checked) {
+      border-color: var(--moss);
+      background: var(--sand-pale);
+    }
+    .rsvp-submit { margin-top: 0.5rem; width: 100%; }
+    .rsvp-note {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .rsvp-success {
+      display: none;
+      text-align: center;
+      padding: 2rem 0;
+    }
+    .rsvp-success h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 300;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+    }
+    .rsvp-success p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8; }
+    .rsvp-error {
+      display: none;
+      font-size: 0.85rem;
+      color: #8B3A3A;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    /* BACK LINK */
+    .back-link-wrap {
+      text-align: center;
+      padding: 0 2.5rem 4rem;
+    }
+    .back-link-wrap a {
+      font-family: var(--font-label);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+    .back-link-wrap a:hover { opacity: 1; }
+
+    /* FOOTER */
+    footer {
+      background: var(--espresso);
+      padding: 4rem 2.5rem 3rem;
+      border-top: 1px solid rgba(203,184,159,0.1);
+    }
+    .footer-grid {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 60px;
+    }
+    @media (max-width: 760px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } }
+
+    .footer-brand .nav-logo { display: block; margin-bottom: 0.75rem; font-size: 0.85rem; }
+    .footer-brand p { font-size: 0.8rem; color: var(--steel); opacity: 0.8; line-height: 1.7; }
+    .footer-brand a { color: var(--steel); text-decoration: none; }
+
+    .footer-col h4 {
+      font-family: var(--font-label);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--sand);
+      margin-bottom: 1rem;
+      opacity: 0.85;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.6rem; }
+    .footer-col ul li a {
+      font-size: 0.8rem;
+      color: var(--steel);
+      text-decoration: none;
+      opacity: 0.8;
+      transition: opacity 0.2s, color 0.2s;
+    }
+    .footer-col ul li a:hover { opacity: 1; color: var(--sand-light); }
+
+    .footer-bottom {
+      max-width: 960px;
+      margin: 2rem auto 0;
+      padding: 2rem 1rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(203,184,159,0.08);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-bottom p { font-size: 0.75rem; color: var(--steel); opacity: 0.6; }
+    .footer-social { display: flex; gap: 1.5rem; }
+    .footer-social a {
+      font-family: var(--font-label);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--sand-light);
+      text-decoration: none;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+    }
+    .footer-social a:hover { opacity: 1; }
+
+    /* REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.15s; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-logo">HABITAT FITNESS</a>
+    <ul class="nav-links">
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#experience">Experience</a></li>
+      <li><a href="/#coaching">Coaching</a></li>
+      <li><a href="/memberships">Membership</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header reveal">
+    <div class="section-label">Grand Opening</div>
+    <h1>You're invited.<br><em>Come grow with us.</em></h1>
+    <p>Habitat Fitness is opening its doors in Oceanside for a day of tours, training, and community. Meet the coaches, see the space, and find out what a membership here actually feels like.</p>
+
+    <div class="event-facts">
+      <div>
+        <div class="event-fact-label">Date &amp; Time</div>
+        <div class="event-fact-value">Saturday, October 10 &middot; 10am&ndash;3pm</div>
+      </div>
+      <div>
+        <div class="event-fact-label">Address</div>
+        <div class="event-fact-value"><a href="https://maps.google.com/?q=1828+Oceanside+Blvd,+Oceanside,+CA+92054" target="_blank" rel="noopener">1828 Oceanside Blvd, Oceanside, CA 92054</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENT DETAILS / MAP -->
+  <section class="details-section reveal">
+    <div class="details-grid">
+      <div class="details-text">
+        <div class="section-label">Getting There</div>
+        <p>Habitat Fitness sits at 1828 Oceanside Blvd, right in the heart of Oceanside, CA. Stop by any time between 10am and 3pm on October 10, no appointment needed.</p>
+        <p>Parking is available on site. Come as you are, whether you're curious about a membership, personal training, or just want to see what we've built.</p>
+      </div>
+      <div class="details-map">
+        <iframe
+          src="https://www.google.com/maps?q=1828+Oceanside+Blvd,+Oceanside,+CA+92054&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Map to Habitat Fitness, 1828 Oceanside Blvd, Oceanside, CA 92054">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRAND OPENING SPECIAL -->
+  <section class="offer-section reveal">
+    <div class="offer-inner">
+      <div class="section-label">Grand Opening Special</div>
+      <h2>A membership special.<br><em>Grand Opening day only.</em></h2>
+      <p>Habitat Fitness is putting together a membership special just for Grand Opening day. Details are coming soon, so stop by October 10 or check back here to see what's available.</p>
+      <a href="/memberships" class="btn-join">View Membership Options</a>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="rsvp-section reveal">
+    <div class="rsvp-card">
+
+      <form id="rsvp-form">
+        <h2>RSVP Free</h2>
+        <p>Let us know you're coming. It takes less than a minute.</p>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
+          </div>
+          <div class="form-field">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required autocomplete="tel">
+          </div>
+          <div class="form-field">
+            <label for="guests">Number Attending</label>
+            <input type="number" id="guests" name="guests" min="1" value="1" required>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label>What are you interested in?</label>
+          <div class="interest-options">
+            <label class="interest-option">
+              <input type="radio" name="interest" value="Open House" required> Open House
+            </label>
+            <label class="interest-option">
+              <input type="radio" name="interest" value="Membership"> Membership
+            </label>
+            <label class="interest-option">
+              <input type="radio" name="interest" value="Personal Training"> Personal Training
+            </label>
+            <label class="interest-option">
+              <input type="radio" name="interest" value="Just supporting"> Just supporting
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-dark rsvp-submit" id="rsvp-submit-btn">RSVP Free</button>
+        <div class="rsvp-error" id="rsvp-error">Something went wrong sending your RSVP. Please try again, or reach us at <a href="mailto:Owners@habitatoceanside.com">Owners@habitatoceanside.com</a>.</div>
+        <p class="rsvp-note">No cost to attend. We'll send a reminder before October 10.</p>
+      </form>
+
+      <div class="rsvp-success" id="rsvp-success">
+        <h2>You're on the list.</h2>
+        <p>Thanks for RSVPing to the Habitat Fitness Grand Opening. We'll see you Saturday, October 10, from 10am to 3pm at 1828 Oceanside Blvd.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="back-link-wrap">
+    <a href="/">Back to Habitat Fitness</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo">HABITAT FITNESS</a>
+        <p>Oceanside, CA</p>
+        <p style="margin-top:0.4rem; font-size:0.8rem; color:var(--steel); line-height:1.6;">
+          Mon&ndash;Fri 8am&ndash;8pm<br>
+          Sat&ndash;Sun 8am&ndash;2pm<br>
+          24-hour access for members
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/#experience">Experience</a></li>
+          <li><a href="/memberships">Membership</a></li>
+          <li><a href="/#coaching">Coaching</a></li>
+          <li><a href="/#about">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:Owners@habitatoceanside.com">Owners@habitatoceanside.com</a></li>
+          <li><a href="tel:+14422669563">442-266-9563</a></li>
+          <li><a href="https://maps.google.com/?q=1828+Oceanside+Blvd,+Oceanside,+CA+92054" target="_blank" rel="noopener">1828 Oceanside Blvd, Oceanside CA 92054</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="/terms-of-use.html">Terms of Use</a></li>
+          <li><a href="/accessibility.html">Accessibility Statement</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Habitat Fitness. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/habitatoceanside/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@habitatoceanside" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ------------------------------------------------------------------
+    // RSVP FORM -> GOOGLE FORM BACKEND
+    //
+    // Submissions are sent straight into a Google Form's responses,
+    // which lands them in a Google Sheet, while visitors only ever see
+    // this styled Habitat page (never the Google Forms UI).
+    //
+    // SETUP (one-time, ~5 minutes):
+    // 1. Create a new Google Form with these questions, IN THIS ORDER,
+    //    each set to "Short answer" except the last (set to "Multiple choice"):
+    //      1. First Name
+    //      2. Last Name
+    //      3. Email
+    //      4. Phone
+    //      5. Number Attending
+    //      6. What are you interested in?  (options, exactly:
+    //         Open House / Membership / Personal Training / Just supporting)
+    // 2. Click the three-dot menu (top right of the form editor) ->
+    //    "Get pre-filled link".
+    // 3. Fill in any sample answer for every question, click "Get Link",
+    //    then "Copy Link".
+    // 4. Paste that copied link somewhere you can read it (e.g. a text
+    //    editor). It will look like:
+    //      https://docs.google.com/forms/d/e/1FAIpQLS.../viewform?usp=pp_url&entry.111=John&entry.222=Doe&entry.333=john%40x.com&entry.444=555...&entry.555=2&entry.666=Membership
+    // 5. Below, set GOOGLE_FORM_ACTION to that same URL but with
+    //    "viewform" changed to "formResponse".
+    // 6. Set each entry ID below to match, using the sample values you
+    //    typed to tell which "entry.NNNNNNN" belongs to which question.
+    // ------------------------------------------------------------------
+    const GOOGLE_FORM_ACTION = "PASTE_YOUR_GOOGLE_FORM_FORMRESPONSE_URL_HERE";
+    const FIELD_IDS = {
+      firstName: "entry.REPLACE_ME",
+      lastName:  "entry.REPLACE_ME",
+      email:     "entry.REPLACE_ME",
+      phone:     "entry.REPLACE_ME",
+      guests:    "entry.REPLACE_ME",
+      interest:  "entry.REPLACE_ME"
+    };
+
+    const form = document.getElementById('rsvp-form');
+    const successEl = document.getElementById('rsvp-success');
+    const errorEl = document.getElementById('rsvp-error');
+    const submitBtn = document.getElementById('rsvp-submit-btn');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      errorEl.style.display = 'none';
+
+      const configured = GOOGLE_FORM_ACTION.startsWith('http');
+      if (!configured) {
+        // Setup not finished yet: still confirm the RSVP was received here
+        // in the browser so nothing looks broken during testing, but flag
+        // it loudly in the console for whoever is wiring this up.
+        console.warn('Habitat RSVP: GOOGLE_FORM_ACTION / FIELD_IDS are not configured yet. See the setup comment above this script.');
+        form.style.display = 'none';
+        successEl.style.display = 'block';
+        return;
+      }
+
+      const data = new FormData();
+      data.append(FIELD_IDS.firstName, document.getElementById('firstName').value);
+      data.append(FIELD_IDS.lastName, document.getElementById('lastName').value);
+      data.append(FIELD_IDS.email, document.getElementById('email').value);
+      data.append(FIELD_IDS.phone, document.getElementById('phone').value);
+      data.append(FIELD_IDS.guests, document.getElementById('guests').value);
+      const interestEl = form.querySelector('input[name="interest"]:checked');
+      data.append(FIELD_IDS.interest, interestEl ? interestEl.value : '');
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      fetch(GOOGLE_FORM_ACTION, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: data
+      }).then(function () {
+        form.style.display = 'none';
+        successEl.style.display = 'block';
+      }).catch(function () {
+        errorEl.style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'RSVP Free';
+      });
+    });
+
+    // Reveal-on-scroll, matching the rest of the site
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
