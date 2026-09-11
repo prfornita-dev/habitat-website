@@ -653,15 +653,15 @@
     // 6. Set each entry ID below to match, using the sample values you
     //    typed to tell which "entry.NNNNNNN" belongs to which question.
     // ------------------------------------------------------------------
-    const GOOGLE_FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLScZjWOd_4kvL-2aEoRVMKmxbGVqcKWMB4sqm5bQ_d7SF2cOog/viewform?usp=pp_url&entry.1082840342=John&entry.808953052=Smith&entry.2129062621=smithyjohn@gmail.com&entry.2127922573=5555555555&entry.649552719=Just+me&entry.2105665570=Membership";
-    const FIELD_IDS = {
-      firstName: "entry.REPLACE_ME",
-      lastName:  "entry.REPLACE_ME",
-      email:     "entry.REPLACE_ME",
-      phone:     "entry.REPLACE_ME",
-      guests:    "entry.REPLACE_ME",
-      interest:  "entry.REPLACE_ME"
-    };
+   const GOOGLE_FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLScZjWOd_4kvL-2aEoRVMKmxbGVqcKWMB4sqm5bQ_d7SF2cOog/formResponse";
+const FIELD_IDS = {
+  firstName: "entry.1082840342",
+  lastName:  "entry.808953052",
+  email:     "entry.2129062621",
+  phone:     "entry.2127922573",
+  guests:    "entry.649552719",
+  interest:  "entry.2105665570"
+};
 
     const form = document.getElementById('rsvp-form');
     const successEl = document.getElementById('rsvp-success');
