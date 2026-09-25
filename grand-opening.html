@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grand Opening · Habitat Fitness</title>
-  <meta name="description" content="Habitat Fitness Grand Opening: Saturday, October 10, 10am to 2pm, in Oceanside, CA. RSVP free and see the Grand Opening membership special.">
+  <meta name="description" content="Habitat Fitness Grand Opening: Saturday, October 10, 10am to 2pm, in Oceanside, CA. RSVP free and join by 10/10 for your first month free.">
 
   <meta name="robots" content="noindex">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -185,6 +185,51 @@
     }
     .details-map iframe { width: 100%; height: 100%; border: 0; display: block; }
 
+    /* HIGHLIGHTS / ON THE DAY */
+    .highlights-section {
+      padding: 5rem 2.5rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .highlights-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--text-primary);
+      margin-bottom: 2.5rem;
+      max-width: 560px;
+    }
+    .highlights-section h2 em { font-style: italic; color: var(--moss); }
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border-color);
+      border: 1px solid var(--border-color);
+    }
+    @media (max-width: 700px) { .highlights-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 460px) { .highlights-grid { grid-template-columns: 1fr; } }
+    .highlight-item {
+      background: var(--page-bg-alt);
+      padding: 2rem 1.5rem;
+    }
+    .highlight-item:last-child { grid-column: span 2; }
+    @media (max-width: 460px) { .highlight-item:last-child { grid-column: span 1; } }
+    .highlight-title {
+      font-family: var(--font-label);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--moss);
+      margin-bottom: 0.5rem;
+    }
+    .highlight-text {
+      font-size: 0.85rem;
+      line-height: 1.65;
+      color: var(--text-secondary);
+    }
+
     /* OFFER SECTION */
     .offer-section {
       padding: 5rem 2.5rem;
@@ -206,6 +251,14 @@
       margin-bottom: 1.5rem;
     }
     .offer-inner h2 em { font-style: italic; color: var(--sand); }
+    .offer-tagline {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      color: var(--sand);
+      margin-bottom: 1.5rem;
+    }
     .offer-inner > p {
       font-size: 1.05rem;
       line-height: 1.85;
@@ -214,8 +267,8 @@
       margin: 0 auto 2.25rem;
     }
     .offer-finePrint {
-      font-size: 0.8rem;
-      line-height: 1.7;
+      font-size: 0.65rem;
+      line-height: 1.6;
       color: #C8B9A4;
       font-style: italic;
       max-width: 560px;
@@ -463,7 +516,7 @@
   <section class="page-header reveal">
     <div class="section-label">Grand Opening</div>
     <h1>You're invited.<br><em>Come grow with us.</em></h1>
-    <p>Habitat Fitness is opening its doors in Oceanside for a day of tours, training, and community. Meet the coaches, see the space, and find out what a membership here actually feels like.</p>
+    <p>Habitat Fitness is opening its doors in Oceanside for a day of tours, training, and community. Meet the coaches, see the space, and find out what a membership here actually feels like</p>
 
     <div class="event-facts">
       <div>
@@ -543,14 +596,53 @@
     </div>
   </section>
 
+  <!-- ON THE DAY -->
+  <section class="highlights-section reveal">
+    <div class="section-label">On The Day</div>
+    <h2>Coffee. Food. Games.<br><em>All day long.</em></h2>
+    <div class="highlights-grid">
+      <div class="highlight-item">
+        <div class="highlight-title">Free Coffee</div>
+        <div class="highlight-text">Grab a cup and stick around.</div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-title">Food</div>
+        <div class="highlight-text">Bites available throughout the day.</div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-title">Games &amp; Challenges</div>
+        <div class="highlight-text">Test yourself out on the floor.</div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-title">Guided Class Workout</div>
+        <div class="highlight-text">Jump into a full group session.</div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-title">Giveaways</div>
+        <div class="highlight-text">Prizes handed out throughout the day.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRAND OPENING SPECIAL -->
+  <section class="offer-section reveal">
+    <div class="offer-inner">
+      <div class="section-label">Grand Opening Special</div>
+      <h2>A membership special.<br><em>Grand Opening day only.</em></h2>
+      <p class="offer-tagline">Join on 10/10 - First month free</p>
+      <p>Habitat Fitness is celebrating Grand Opening day with a special offer. Sign up in person at the gym or online on 10/10, and your first month is on us*</p>
+      <a href="/memberships" class="btn-join">View Membership Options</a>
+      <p class="offer-finePrint">*Valid on month-to-month (3-month minimum term) and 1-year paid-in-full memberships only. Sign up in person or online by 11:59 PM PST on October 10 2026 to qualify.</p>
+    </div>
+  </section>
 
   <!-- EVENT DETAILS / MAP -->
   <section class="details-section reveal">
     <div class="details-grid">
       <div class="details-text">
         <div class="section-label">Getting There</div>
-        <p>Habitat Fitness sits at 1828 Oceanside Blvd, right in the heart of Oceanside, CA. Stop by any time between 10am and 2pm on October 10, no appointment needed.</p>
-        <p>Parking is available on site. Come as you are, whether you're curious about a membership, personal training, or just want to see what we've built.</p>
+        <p>Habitat Fitness sits at 1828 Oceanside Blvd, right in the heart of Oceanside, CA. Stop by any time between 10am and 2pm on October 10, no appointment needed. Just RSVP above</p>
+        <p>Parking is available on site. Come as you are, whether you're curious about a membership, personal training, or just want to see what we've built</p>
       </div>
       <div class="details-map">
         <iframe
@@ -562,17 +654,6 @@
       </div>
     </div>
   </section>
-
-  <!-- GRAND OPENING SPECIAL -->
-  <section class="offer-section reveal">
-    <div class="offer-inner">
-      <div class="section-label">Grand Opening Special</div>
-      <h2>A membership special.<br><em>Grand Opening day only.</em></h2>
-      <p>Habitat Fitness is putting together a membership special just for Grand Opening day. Details are coming soon, so stop by October 10 or check back here to see what's available.</p>
-      <a href="/memberships" class="btn-join">View Membership Options</a>
-    </div>
-  </section>
-
 
   <div class="back-link-wrap">
     <a href="/">Back to Habitat Fitness</a>
