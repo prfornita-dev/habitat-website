@@ -248,6 +248,67 @@ src="https://www.facebook.com/tr?id=1076206718654047&ev=PageView&noscript=1"
       color: var(--text-secondary);
     }
 
+    /* SCHEDULE OF EVENTS */
+    .timeline-section {
+      padding: 5rem 2.5rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .timeline-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--text-primary);
+      margin-bottom: 2.5rem;
+      max-width: 560px;
+    }
+    .timeline-section h2 em { font-style: italic; color: var(--moss); }
+    .timeline-list { display: flex; flex-direction: column; }
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 2rem;
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .timeline-item:first-child { border-top: 1px solid var(--border-color); }
+    @media (max-width: 600px) {
+      .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    }
+    .timeline-time {
+      font-family: var(--font-label);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--moss);
+    }
+    .timeline-content p {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: var(--text-secondary);
+    }
+    .timeline-content ul {
+      list-style: none;
+      margin-top: 0.6rem;
+    }
+    .timeline-content ul li {
+      font-size: 0.9rem;
+      line-height: 1.85;
+      color: var(--text-secondary);
+      padding-left: 1.1rem;
+      position: relative;
+    }
+    .timeline-content ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.7em;
+      width: 0.3rem;
+      height: 0.3rem;
+      background: var(--moss-light);
+    }
+
     /* OFFER SECTION */
     .offer-section {
       padding: 5rem 2.5rem;
@@ -638,6 +699,50 @@ src="https://www.facebook.com/tr?id=1076206718654047&ev=PageView&noscript=1"
       <div class="highlight-item">
         <div class="highlight-title">Giveaways</div>
         <div class="highlight-text">Prizes handed out throughout the day.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHEDULE OF EVENTS -->
+  <section class="timeline-section reveal">
+    <div class="section-label">Schedule of Events</div>
+    <h2>Here's how the day<br><em>comes together.</em></h2>
+    <div class="timeline-list">
+      <div class="timeline-item">
+        <div class="timeline-time">10:00 AM</div>
+        <div class="timeline-content">
+          <ul>
+            <li>Open Doors to Public</li>
+            <li>First 100 attendees get a free Habitat goodie bag</li>
+            <li>Tour the gym</li>
+            <li>Enjoy Vendor Activations &amp; Refreshments</li>
+            <li>Community games</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">10:00&ndash;10:45 AM</div>
+        <div class="timeline-content">
+          <p>Community HIIT class. Must RSVP via Instagram, email, or in person at the front desk</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">11:00 AM</div>
+        <div class="timeline-content">
+          <p>Food truck &amp; final vendor refreshments</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">11:30 AM</div>
+        <div class="timeline-content">
+          <p>Opening Remarks by Habitat Founders (Dom, Tristan, and Tyler)</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">12:00&ndash;2:00 PM</div>
+        <div class="timeline-content">
+          <p>Community competitions, games, activities, giveaways &amp; more</p>
+        </div>
       </div>
     </div>
   </section>
