@@ -4,25 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Habitat Fitness - Growing Together.</title>
-
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1076206718654047');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1076206718654047&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
- 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -234,21 +215,6 @@ src="https://www.facebook.com/tr?id=1076206718654047&ev=PageView&noscript=1"
     opacity: 0;
     animation: fadeUp 0.9s ease 0.65s forwards;
   }
-  .btn-ghost {
-    font-family: var(--font-label);
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    background: transparent;
-    color: var(--sand-light);
-    padding: 13px 30px;
-    text-decoration: none;
-    border: 1px solid rgba(203,184,159,0.35);
-    display: inline-block;
-    transition: border-color 0.2s, color 0.2s;
-}
-  .btn-ghost:hover { border-color: var(--sand); color: var(--sand); }
   .btn-primary {
     font-family: var(--font-label);
     font-size: 12px;
@@ -263,11 +229,26 @@ src="https://www.facebook.com/tr?id=1076206718654047&ev=PageView&noscript=1"
     cursor: pointer;
     display: inline-block;
     transition: border-color 0.2s, color 0.2s;
-}
-.btn-primary:hover { border-color: var(--sand); color: var(--sand); }
+  }
+  .btn-primary:hover { border-color: var(--sand); color: var(--sand); }
+  .btn-ghost {
+    font-family: var(--font-label);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    background: transparent;
+    color: var(--sand-light);
+    padding: 12px 26px;
+    text-decoration: none;
+    border: 1px solid rgba(203,184,159,0.35);
+    display: inline-block;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-ghost:hover { border-color: var(--sand); color: var(--sand); }
 
-/* Fixed side "Join" tab */
-.side-join {
+  /* Fixed side "Join" tab */
+  .side-join {
     position: fixed;
     top: 25%;
     right: 0;
@@ -286,17 +267,17 @@ src="https://www.facebook.com/tr?id=1076206718654047&ev=PageView&noscript=1"
     border-radius: 8px 0 0 8px;
     box-shadow: -6px 6px 18px rgba(0,0,0,0.25);
     transition: padding 0.25s ease, background 0.2s ease, color 0.2s ease;
-}
-.side-join:hover {
+  }
+  .side-join:hover {
     padding-left: 26px;
     background: var(--espresso);
     color: var(--sand);
     border-color: var(--sand);
-}
-@media (max-width: 600px) {
-    .side-join { font-size: 14px; padding: 13px 16px 13px 14px; }
+  }
+  @media (max-width: 600px) {
+    .side-join { font-size: 14px; padding: 13px 16px 13px 14px; top: auto; bottom: 24px; }
     .side-join:hover { padding-left: 20px; }
-}
+  }
 
   /* Founding badge */
   .founding-badge {
@@ -1358,6 +1339,9 @@ src="https://www.facebook.com/tr?id=1076206718654047&ev=PageView&noscript=1"
   .amenity-img-sauna {
     background: linear-gradient(135deg, #2c2118 0%, #3d2e22 50%, #4a3828 100%);
   }
+  .amenity-img-clinic {
+    background: linear-gradient(135deg, #1e2420 0%, #2a332c 50%, #354039 100%);
+  }
 
   /* ─── WHY IMAGE COLUMN ─── */
   .why-img {
@@ -1427,6 +1411,12 @@ src="https://www.facebook.com/tr?id=1076206718654047&ev=PageView&noscript=1"
   .lifestyle-box:hover .img-bg { transform: scale(1.05); }
   .lifestyle-box-sauna .img-bg {
     background: linear-gradient(135deg, #2c2118 0%, #3d2e22 100%);
+  }
+  .lifestyle-box-iv .img-bg {
+    background: linear-gradient(135deg, #1e2420 0%, #2a332c 100%);
+  }
+  .lifestyle-box-peptide .img-bg {
+    background: linear-gradient(135deg, #252523 0%, #303531 100%);
   }
 
   /* ─── PROOF SECTION SAND ─── */
@@ -1572,10 +1562,12 @@ src="https://www.facebook.com/tr?id=1076206718654047&ev=PageView&noscript=1"
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="/memberships">Membership</a></li>
-    <li><a href="#coaching">Coaching</a></li>
+    <li><a href="#coaching">Trainers</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
+
+<!-- SIDE JOIN TAB -->
 <a href="/memberships" class="side-join">Join</a>
 
 <!-- HERO -->
@@ -1616,6 +1608,7 @@ src="https://www.facebook.com/tr?id=1076206718654047&ev=PageView&noscript=1"
     <span class="strip-item">Sauna & Recovery</span>
     <span class="strip-item">Outdoor training</span>
     <span class="strip-item">Cardio</span>
+    <span class="strip-item">Wellness Clinic (coming soon)</span>
     <span class="strip-item">Oceanside, CA</span>
     <span class="strip-item">Posing Room</span>
     <!-- duplicate for seamless loop -->
@@ -1624,6 +1617,7 @@ src="https://www.facebook.com/tr?id=1076206718654047&ev=PageView&noscript=1"
     <span class="strip-item">Sauna & Recovery</span>
     <span class="strip-item">Outdoor training</span>
     <span class="strip-item">Cardio</span>
+    <span class="strip-item">Wellness Clinic (coming soon)</span>
     <span class="strip-item">Oceanside, CA</span>
     <span class="strip-item">Posing Room</span>
   </div>
@@ -1668,7 +1662,7 @@ src="https://www.facebook.com/tr?id=1076206718654047&ev=PageView&noscript=1"
         <svg viewBox="0 0 24 24"><path d="M6.5 6.5h11v11h-11z"/><path d="M4 9h2M18 9h2M4 15h2M18 15h2"/><path d="M9 4v2M15 4v2M9 18v2M15 18v2"/></svg>
       </div>
       <div class="amenity-title">Strength Floor</div>
-      <div class="amenity-desc">Full rack system, barbells, specialty bars. Set up for bodybuilding, powerlifting, crosstraining and more</div>
+      <div class="amenity-desc">Full rack system, barbells, specialty bars. Set up for bodybuilding and powerlifting</div>
     </div>
     <div class="amenity-card reveal reveal-delay-1">
       <div class="amenity-card-img img-zoom-wrap">
@@ -1679,7 +1673,7 @@ src="https://www.facebook.com/tr?id=1076206718654047&ev=PageView&noscript=1"
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 3"/><path d="M8 3l4 1 4-1"/></svg>
       </div>
       <div class="amenity-title">Cardio</div>
-      <div class="amenity-desc">Treadmills, stairmasters, bikes, rowers, arc trainers. Natural light, open space</div>
+      <div class="amenity-desc">Treadmills, stairmasters, bikes, rowers, ski ergs. Natural light, open space</div>
     </div>
     <div class="amenity-card reveal reveal-delay-2">
       <div class="amenity-card-img img-zoom-wrap">
@@ -1881,7 +1875,7 @@ src="https://www.facebook.com/tr?id=1076206718654047&ev=PageView&noscript=1"
       <ul>
         <li><a href="#experience">Experience</a></li>
         <li><a href="/memberships">Membership</a></li>
-        <li><a href="#coaching">Coaching</a></li>
+        <li><a href="#coaching">Trainers</a></li>
         <li><a href="#about">About</a></li>
       </ul>
     </div>
