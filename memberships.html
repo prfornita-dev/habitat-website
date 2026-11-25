@@ -138,11 +138,26 @@
     }
 
 
+    .membership-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+    }
+    @media (max-width: 700px) { .membership-grid { grid-template-columns: 1fr; } }
+
     .membership-card {
       background: var(--espresso);
       padding: 3rem;
       display: flex;
       flex-direction: column;
+    }
+    .membership-card .btn-join { margin-top: auto; }
+    .membership-terms {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: var(--text-secondary);
+      padding-top: 1.75rem;
+      max-width: 720px;
     }
     .membership-card-label {
       font-family: var(--font-label);
@@ -178,6 +193,7 @@
     .membership-features {
       list-style: none;
       margin-bottom: 2.5rem;
+      flex-grow: 1;
     }
     .membership-features li {
       font-size: 0.925rem;
@@ -460,17 +476,19 @@
   <!-- PAGE HEADER -->
   <section class="page-header reveal">
     <div class="section-label">Membership</div>
-    <h1>One membership<br><em>Everything included</em></h1>
+    <h1>Two ways to join<br><em>Everything included</em></h1>
   </section>
 
   <!-- MEMBERSHIP SECTION -->
   <section class="membership-section">
-    <div class="reveal">
-      <div class="membership-card" style="max-width: 100%;">
+    <div class="membership-grid reveal">
+
+      <!-- All-Access -->
+      <div class="membership-card">
         <div class="membership-card-label">All-Access Membership</div>
         <div class="membership-price"><sup>$</sup>100</div>
         <div class="membership-price-unit">Per month</div>
-        <ul class="membership-features" style="columns: 2; column-gap: 3rem;">
+        <ul class="membership-features">
           <li>Strength floor</li>
           <li>Outdoor training area</li>
           <li>Cardio floor</li>
@@ -480,13 +498,28 @@
           <li>24-hour member access</li>
           <li>Towel service</li>
         </ul>
-        <div class="membership-note">
-          3-month minimum commitment. No initiation fee or annual fee. Our opening rate. As membership fills, pricing will adjust to match
-        </div>
         <a href="https://habitatfitness.gymmasteronline.com/portal/membership/690030ccdb4853f03ae842d1fec0f6f3"
-           target="_blank" rel="noopener" class="btn-join">Join Habitat Fitness</a>
+           target="_blank" rel="noopener" class="btn-join">Join All-Access</a>
       </div>
+
+      <!-- Plus -->
+      <div class="membership-card">
+        <div class="membership-card-label">Plus Membership</div>
+        <div class="membership-price"><sup>$</sup>150</div>
+        <div class="membership-price-unit">Per month</div>
+        <ul class="membership-features">
+          <li>Everything in All-Access</li>
+          <li>Bring one guest with you per visit</li>
+        </ul>
+        <div class="membership-note">
+          Your guest must be with you at entry and sign a day waiver. One guest per visit
+        </div>
+        <a href="https://habitatfitness.gymmasteronline.com/portal/membership/29681cd28f6b7860ed0a32bf148fcab3"
+           target="_blank" rel="noopener" class="btn-join">Join Plus</a>
+      </div>
+
     </div>
+    <p class="membership-terms reveal">3-month minimum commitment. No initiation fee or annual fee. Our opening rates. As membership fills, pricing will adjust to match</p>
   </section>
 
   <!-- WELCOME STRIP -->
@@ -530,9 +563,10 @@
 
       <div class="reveal">
         <div class="section-label">Personal Training</div>
-        <h2>10+ coaches.<br><em>Every specialty.</em></h2>
-        <p>Habitat Fitness is home to more than ten experienced coaches, each with their own approach, background, and area of focus. Whether you are just starting out, chasing a specific goal, or returning to training after a long break, there is someone here for you</p>
+        <h2>10+ trainers.<br><em>Every specialty.</em></h2>
+        <p>Habitat Fitness is home to more than ten experienced trainers, each with their own approach, background, and area of focus. Whether you are just starting out, chasing a specific goal, or returning to training after a long break, there is someone here for you</p>
         <p>Come in, introduce yourself, and we will help match you with the right coach. First sessions and consultations are a great place to start</p>
+        <a href="/coaches" class="btn-join" style="margin-top: 1rem;">Meet the Trainers</a>
       </div>
 
       <div class="coaching-details reveal reveal-delay-1">
@@ -542,11 +576,11 @@
         </div>
         <div class="coaching-detail-item">
           <div class="coaching-detail-title">How to get started</div>
-          <div class="coaching-detail-text">Stop in and say hello. Our coaches are on the floor and happy to talk through what you are working toward before committing to anything</div>
+          <div class="coaching-detail-text">Stop in and say hello. Our trainers are on the floor and happy to talk through what you are working toward before committing to anything</div>
         </div>
         <div class="coaching-detail-item">
           <div class="coaching-detail-title">Rates and availability</div>
-          <div class="coaching-detail-text">Each coach sets their own schedule and pricing. Availability varies, so the sooner you connect, the better</div>
+          <div class="coaching-detail-text">Each trainer sets their own schedule and pricing. Availability varies, so the sooner you connect, the better</div>
         </div>
 
       </div>
@@ -587,7 +621,7 @@
         <ul>
           <li><a href="/#experience">Experience</a></li>
           <li><a href="/memberships">Membership</a></li>
-          <li><a href="/coaches">Trainers</a></li>
+          <li><a href="/#coaching">Coaching</a></li>
           <li><a href="/#about">About</a></li>
         </ul>
       </div>
